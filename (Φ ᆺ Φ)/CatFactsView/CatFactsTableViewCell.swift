@@ -12,10 +12,11 @@ final class CatFactsTableViewCell: UITableViewCell {
     // MARK: - Properties
     private let factLabel: UILabel = {
         let label = UILabel()
+        label.translatesAutoresizingMaskIntoConstraints = false
+        label.font = .systemFont(ofSize: 23)
         return label
     }()
     
-    private var catFacts = [CatFacts]()
     // MARK: - Init
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
@@ -36,18 +37,17 @@ final class CatFactsTableViewCell: UITableViewCell {
     }
     
     // MARK: - Configure
-    //TODO: - Fix this mess.
     func configure(model: CatFacts) {
-        //factLabel.text = model.fact
-        factLabel.text = "Hii"
+        factLabel.text = model.fact
     }
     
     // MARK: - Private Methods
     private func setupConstraints() {
+        self.addSubview(factLabel)
         NSLayoutConstraint.activate([
             factLabel.topAnchor.constraint(equalTo: self.topAnchor),
-            factLabel.leadingAnchor.constraint(equalTo: self.leftAnchor),
-            factLabel.trailingAnchor.constraint(equalTo: self.rightAnchor),
+            factLabel.leadingAnchor.constraint(equalTo: self.leadingAnchor),
+            factLabel.trailingAnchor.constraint(equalTo: self.trailingAnchor),
             factLabel.bottomAnchor.constraint(equalTo: self.bottomAnchor),
         ])
     }

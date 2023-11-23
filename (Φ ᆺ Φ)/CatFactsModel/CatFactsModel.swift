@@ -10,7 +10,7 @@ import Foundation
 import Foundation
 
 struct FactResults: Decodable {
-    let results: [CatFacts]
+    let data: [CatFacts]
 }
 
 struct CatFacts: Decodable {
