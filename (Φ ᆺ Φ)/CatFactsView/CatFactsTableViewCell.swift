@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import CatFactPackage
 
 final class CatFactsTableViewCell: UITableViewCell {
 
@@ -16,6 +17,8 @@ final class CatFactsTableViewCell: UITableViewCell {
         label.font = .systemFont(ofSize: 23)
         return label
     }()
+    
+    private var catFacts = [CatFactPackage.CatFacts]()
     
     // MARK: - Init
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {

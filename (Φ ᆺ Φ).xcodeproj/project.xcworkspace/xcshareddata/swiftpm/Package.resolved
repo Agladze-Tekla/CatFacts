@@ -1,0 +1,16 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "CatFactPackage",
+        "repositoryURL": "https://github.com/Agladze-Tekla/CatFactPackage",
+        "state": {
+          "branch": "main",
+          "revision": "1a6214ce55799849f7297faa9b5d953bc017d80e",
+          "version": null
+        }
+      }
+    ]
+  },
+  "version": 1
+}

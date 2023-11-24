@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import CatFactPackage
 
 final class CatFactsViewController: UIViewController {
     
@@ -16,8 +17,10 @@ final class CatFactsViewController: UIViewController {
         return tableView
     }()
     
-    private var catFacts = [CatFacts]()
-    private let viewModel = CatFactsViewModel()
+    //private var catFacts = [CatFacts]()
+    //private let viewModel = CatFactsViewModel()
+    private var catFacts = [CatFactPackage.CatFacts]()
+    private let viewModel = CatFactPackage.CatFactsViewModel()
     
     //MARK: - ViewLifeCycle
     override func viewDidLoad() {
@@ -75,7 +78,7 @@ extension CatFactsViewController: UITableViewDataSource {
 }
 
 // MARK: - CatFactsViewModelDelegate
-extension CatFactsViewController: CatFactsViewModelDelegate {
+extension CatFactsViewController: CatFactPackage.CatFactsViewModelDelegate {
     func factsFetched(_ facts: [CatFacts]) {
         self.catFacts = facts
         DispatchQueue.main.async {
